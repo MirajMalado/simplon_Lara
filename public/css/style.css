@@ -36,7 +36,7 @@ h2.sp-line-under::after {
     height: 3px;
     left: 0;
     top: 105%;
-   
+    background: #000 !important;
 }
 
 .sp-red {

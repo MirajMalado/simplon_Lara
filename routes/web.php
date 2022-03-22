@@ -14,10 +14,10 @@ use App\Http\Controllers\FormationController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [FormationController::class,'index'])->name('formation.index');
 
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('/formation',[FormationController::class, 'index']);
-
+require __DIR__.'/auth.php';
